@@ -23,10 +23,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="serverSecurityTest" />
+        <module name="serverSecurityTestResource" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="serverSecurityTest" target="1.8" />
+      <module name="serverSecurityTestResource" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
