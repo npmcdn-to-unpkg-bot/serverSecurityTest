@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/serverSecurityTestResource/pom.xml" />
         <option value="$PROJECT_DIR$/demoJwt/pom.xml" />
+        <option value="$PROJECT_DIR$/SSJWT/pom.xml" />
       </list>
     </option>
   </component>
