@@ -1,5 +1,8 @@
 package com.example;
 
+//mer info po
+//https://github.com/nielsutrecht/jwt-angular-spring
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,6 +17,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class DemoJwtApplication {
 
+	//test
 	@Bean
 	public FilterRegistrationBean jwtFilter() {
 		final FilterRegistrationBean registrationBean = new FilterRegistrationBean();
