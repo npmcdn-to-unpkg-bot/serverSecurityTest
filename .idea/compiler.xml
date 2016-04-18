@@ -22,11 +22,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="demoJwt" />
         <module name="serverSecurityTest" />
         <module name="serverSecurityTestResource" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="demoJwt" target="1.8" />
       <module name="serverSecurityTest" target="1.8" />
       <module name="serverSecurityTestResource" target="1.8" />
     </bytecodeTargetLevel>
