@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/serverSecurityTestResource/pom.xml" />
         <option value="$PROJECT_DIR$/demoJwt/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-mongodb/pom.xml" />
       </list>
     </option>
   </component>

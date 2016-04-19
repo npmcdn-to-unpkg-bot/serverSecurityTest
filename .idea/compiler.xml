@@ -25,12 +25,14 @@
         <module name="demoJwt" />
         <module name="serverSecurityTest" />
         <module name="serverSecurityTestResource" />
+        <module name="spring-boot-mongodb" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demoJwt" target="1.8" />
       <module name="serverSecurityTest" target="1.8" />
       <module name="serverSecurityTestResource" target="1.8" />
+      <module name="spring-boot-mongodb" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

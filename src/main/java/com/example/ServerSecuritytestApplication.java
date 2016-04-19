@@ -36,6 +36,7 @@ public class ServerSecuritytestApplication {
 
 	@RequestMapping("/user")
 	public Principal user(Principal user) {
+		System.out.println("calling user check for user:"+user.getName());
 		return user;
 	}
 
@@ -50,6 +51,7 @@ public class ServerSecuritytestApplication {
 	@RequestMapping("/token")
 	@ResponseBody
 	public Map<String, String> token(HttpSession session) {
+		System.out.println("Send token "+session.getId()+session.toString());
 		return Collections.singletonMap("token", session.getId());
 	}
 
