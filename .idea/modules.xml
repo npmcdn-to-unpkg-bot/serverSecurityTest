@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SSJWT/SSJWT.iml" filepath="$PROJECT_DIR$/SSJWT/SSJWT.iml" />
       <module fileurl="file://$PROJECT_DIR$/demoJwt/demoJwt.iml" filepath="$PROJECT_DIR$/demoJwt/demoJwt.iml" />
       <module fileurl="file://$PROJECT_DIR$/serverSecurityTest.iml" filepath="$PROJECT_DIR$/serverSecurityTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/serverSecurityTestResource/serverSecurityTestResource.iml" filepath="$PROJECT_DIR$/serverSecurityTestResource/serverSecurityTestResource.iml" />

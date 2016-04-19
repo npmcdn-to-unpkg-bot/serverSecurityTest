@@ -1,35 +1,43 @@
-//package com.example;
+package com.example;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.security.SecurityProperties;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
+
+@Configuration
+@Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
+public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+
+	@Autowired
+	private UserDetailsService userDetailsService;
+
+	@Override
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+		auth.userDetailsService(userDetailsService);
+	}
+
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		http.httpBasic().and().authorizeRequests()
+				.antMatchers("/index.html", "/home.html", "/login.html", "/",
+						"/bootstrap-3.3.6-dist/css/*",
+						"/angular-1.5.3/angular.js",
+						"/angular-1.5.3/angular-route.js"
+
+
+				).permitAll().anyRequest()
+				.authenticated();
+
+//		.antMatchers("/index.html", "/home.html", "/login.html", "/",
+//							"/bootstrap-3.3.6-dist/css/*",
+//							"/angular-1.5.3/angular.js",
+//							"/angular-1.5.3/angular-route.js"
 //
-//import org.springframework.boot.autoconfigure.security.SecurityProperties;
-//import org.springframework.context.annotation.Configuration;
-//import org.springframework.core.annotation.Order;
-//import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-//import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-//import org.springframework.security.web.csrf.CsrfFilter;
-//import org.springframework.security.web.csrf.CsrfTokenRepository;
-//import org.springframework.security.web.csrf.HttpSessionCsrfTokenRepository;
-//
-///**
-// * Created by Sebastian Börebäck on 2016-04-17.
-// */
-//
-//@Configuration
-//@Order(SecurityProperties.ACCESS_OVERRIDE_ORDER)
-//public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
-//
-//	@Override
-//	protected void configure(HttpSecurity http) throws Exception {
-//		http.httpBasic().and().authorizeRequests()
-//				.antMatchers("/index.html", "/home.html", "/login.html", "/").permitAll().anyRequest()
-//				.authenticated().and().csrf()
-//				.csrfTokenRepository(csrfTokenRepository()).and()
-//				.addFilterAfter(new CsrfHeaderFilter(), CsrfFilter.class);
-//	}
-//
-//	private CsrfTokenRepository csrfTokenRepository() {
-//		HttpSessionCsrfTokenRepository repository = new HttpSessionCsrfTokenRepository();
-//		repository.setHeaderName("X-XSRF-TOKEN");
-//		return repository;
-//	}
-//
-//}
+//							).permitAll().anyRequest()
+	}
+}

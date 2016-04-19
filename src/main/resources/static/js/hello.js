@@ -74,7 +74,7 @@ angular.module('hello', ['ngRoute']).config(function ($routeProvider, $httpProvi
 
     }).controller('home', function ($http) {
     var self = this;
-    $http.get('token').then(function (response) {
+    $http.get('user').then(function (response) {
         $http({
             url: 'http://localhost:9000',
             method: "GET",
