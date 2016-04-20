@@ -38,8 +38,14 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 						"/angular-1.5.3/angular-route.js"
 
 
-				).permitAll().anyRequest()
-				.authenticated();
+				).permitAll()
+				.antMatchers("/admin_r").hasAuthority("ROLE_ADMIN")
+				.anyRequest()
+				.authenticated().and()
+				.authorizeRequests();
+
+
+
 
 //		.antMatchers("/index.html", "/home.html", "/login.html", "/",
 //							"/bootstrap-3.3.6-dist/css/*",

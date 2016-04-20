@@ -21,6 +21,16 @@ public class HomeController {
 		return user;
 	}
 
+	@RequestMapping("/admin_r")
+	public Map<String, Object> admin_r() {
+		Map<String, Object> model = new HashMap<String, Object>();
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		model.put("id", auth.getName());
+		model.put("content", "Hello Admin");
+		return model;
+	}
+
+
 	@RequestMapping("/resource")
 	public Map<String, Object> home() {
 		Map<String, Object> model = new HashMap<String, Object>();
