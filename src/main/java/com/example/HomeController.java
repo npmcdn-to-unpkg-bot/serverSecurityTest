@@ -17,6 +17,7 @@ public class HomeController {
 
 	@RequestMapping("/user")
 	public Principal user(Principal user) {
+		System.out.println("got user "+user.getName());
 		return user;
 	}
 

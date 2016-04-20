@@ -28,6 +28,8 @@ public class UserController {
 	public UserController() {
 		userDb.put("tom", Arrays.asList("user"));
 		userDb.put("sally", Arrays.asList("user", "admin"));
+		userDb.put("robin", Arrays.asList("user", "admin", "foo"));
+		userDb.put("gustaf", Arrays.asList());
 	}
 
 	@RequestMapping(value = "login", method = RequestMethod.POST)
