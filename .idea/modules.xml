@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/serverSecurityTest.iml" filepath="$PROJECT_DIR$/serverSecurityTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/serverSecurityTestResource/serverSecurityTestResource.iml" filepath="$PROJECT_DIR$/serverSecurityTestResource/serverSecurityTestResource.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-mongodb/spring-boot-mongodb.iml" filepath="$PROJECT_DIR$/spring-boot-mongodb/spring-boot-mongodb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testMongoSec/testMongoSec.iml" filepath="$PROJECT_DIR$/testMongoSec/testMongoSec.iml" />
     </modules>
   </component>
 </project>
